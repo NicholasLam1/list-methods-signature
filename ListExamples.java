@@ -8,7 +8,7 @@ class ListExamples {
   // Returns a new list that has all the elements of the input list for which
   // the StringChecker returns true, and not the elements that return false, in
   // the same order they appeared in the input list;
-  static List<String> filter(StringChecker sc, List<String> list) {
+  static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
@@ -17,7 +17,6 @@ class ListExamples {
     }
     return result;
   }
-
 
   // Takes two sorted list of strings (so "a" appears before "b" and so on),
   // and return a new list that has all the strings in both list in sorted order.
